@@ -45,7 +45,7 @@ module RailsMailgun
       end
     end
 
-    def add_bcc_emails_to_message_object
+    def add_bcc_emails_to_message_object(message_object, mail)
       return unless mail.bcc.present?
 
       bcc_emails = [mail.bcc].flatten
